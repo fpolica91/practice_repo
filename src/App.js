@@ -66,6 +66,7 @@ class App extends Component {
               search={this.searchBeers}
               beers={this.state.filteredBeers}
               ready={this.state.ready} />}
+//               replaced this.props.searchTerm for this.state.searchTerm.
             searchTerm={this.state.searchTerm}
           />
 
