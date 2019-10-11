@@ -26,6 +26,8 @@ class App extends Component {
     await this.getBeers()
   }
 
+// created getBeers function to call from component did mount all the logic is now handled here insteaad than on a lifecylce method
+
   getBeers = async () => {
     axios.get('https://ih-beer-api.herokuapp.com/beers')
       .then(response => {
@@ -39,7 +41,7 @@ class App extends Component {
       })
   }
 
-
+// pass the value from the input as the paramenter to search for
   searchBeers = (beer) => {
     axios.get(`https://ih-beer-api.herokuapp.com/beers/search?q=${beer}`)
       .then(response => {
